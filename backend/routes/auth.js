@@ -10,6 +10,6 @@ const {
 } = require('../validators/auth');
 
 router.post('/signup', userSignupValidator, runValidation, signup);
-router.post('/signin', userSigninValidator, runValidation, signin);
+// router.post('/signin', userSigninValidator, runValidation, signin);
 
 module.exports = router;
