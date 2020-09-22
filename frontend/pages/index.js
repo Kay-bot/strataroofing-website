@@ -1,8 +1,13 @@
 import Layout from '../components/Layout';
+import { Container } from 'reactstrap';
 const Index = () => {
   return (
     <Layout>
-      <h2>Hello World</h2>
+      <Container>
+        <div>
+          <h1>Hello World</h1>
+        </div>
+      </Container>
     </Layout>
   );
 };
