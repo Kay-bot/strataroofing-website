@@ -27,7 +27,7 @@ const Header = (props) => {
         </NavLink>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto font-weight-bold" navbar>
+          <Nav className="ml-auto pr-5 font-weight-bold" navbar>
             <NavItem className={classnames(styles.navLink)}>
               <NavLink href="#">Home</NavLink>
             </NavItem>
