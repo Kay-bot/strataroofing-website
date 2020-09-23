@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { APP_NAME } from '../config';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -12,8 +10,9 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
 } from 'reactstrap';
+import classnames from 'classnames';
+import styles from './Main.module.scss';
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,20 +21,21 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavLink className="font-weight-bold" href="/">
-          {APP_NAME}
+      <Navbar color="#fff" expand="md">
+        <NavLink className={classnames(styles.brand)} href="/">
+          <img alt="strata roofing" src="/images/logo.png" />
         </NavLink>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
+          <Nav className="ml-auto font-weight-bold" navbar>
+            <NavItem className={classnames(styles.navLink)}>
               <NavLink href="#">Home</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#">About</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown
+              nav
+              inNavbar
+              className={classnames(styles.navLink)}
+            >
               <DropdownToggle nav caret>
                 Service
               </DropdownToggle>
@@ -46,7 +46,11 @@ const Header = (props) => {
                 <DropdownItem>Service 4</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem>
+            <NavItem className={classnames(styles.navLink)}>
+              <NavLink href="#">About</NavLink>
+            </NavItem>
+
+            <NavItem className={classnames(styles.navLink)}>
               <NavLink href="#">Blog</NavLink>
             </NavItem>
           </Nav>

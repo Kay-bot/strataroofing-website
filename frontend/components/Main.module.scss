@@ -1,0 +1,38 @@
+@import 'scss/config';
+@import 'scss/utilities';
+@import 'scss/media-query';
+
+// navbar
+
+.brand {
+  margin-right: 0;
+  width: 120px;
+  height: 120px;
+  @include sm {
+    width: 100px;
+    height: 100px;
+  }
+  @include xs {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+
+  &:hover {
+    border-color: $medium-color;
+  }
+
+  &.current {
+    border-color: $main-color;
+  }
+}
+
+// How can we help
