@@ -35,9 +35,17 @@ const Header = (props) => {
             <NavItem>
               <NavLink href="#">About</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#">Service</NavLink>
-            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Service
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Service 1</DropdownItem>
+                <DropdownItem>Service 2</DropdownItem>
+                <DropdownItem>Service 3</DropdownItem>
+                <DropdownItem>Service 4</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <NavItem>
               <NavLink href="#">Blog</NavLink>
             </NavItem>
