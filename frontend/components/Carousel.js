@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classnames from 'classnames';
+
 import {
   Carousel,
   CarouselItem,
@@ -15,6 +15,11 @@ const items = [
     caption: 'Slide 1',
   },
   {
+    src: '/images/banner2.jpg',
+    altText: 'Slide 2',
+    caption: 'Slide 2',
+  },
+  {
     src: '/images/banner3.jpg',
     altText: 'Slide 3',
     caption: 'Slide 3',
@@ -23,6 +28,11 @@ const items = [
     src: '/images/banner4.jpg',
     altText: 'Slide 4',
     caption: 'Slide 4',
+  },
+  {
+    src: '/images/banner5.jpg',
+    altText: 'Slide 5',
+    caption: 'Slide 5',
   },
 ];
 
@@ -77,12 +87,19 @@ const CustomCarousel = (props) => {
               max-width: 100%;
               height: 500px;
             }
-            @media screen and (max-width: 1142px) {
+            @media screen and (max-width: 1100px) {
               .custom-tag {
                 max-width: 100%;
-                height: 250px;
+                height: 350px;
               }
             }
+            @media screen and (max-width: 600px) {
+              .custom-tag {
+                max-width: 100%;
+                height: 200px;
+              }
+            }
+    
             `}
       </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
