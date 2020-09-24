@@ -1,4 +1,3 @@
-import { Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import styles from './Main.module.scss';
 
@@ -11,10 +10,10 @@ const Footer = (props) => {
           <hr></hr>
           <p>
             Strata Roofing specialises in roofing, siding and gutter replacement
-            services. Strata Roofing team has all the neccessary training and
+            services. Strata Roofing team has all the necessary training and
             equipment to ensure that every job is done safely, on time and
-            adheress to OHS standards. Worry free you can count on Strata
-            Roofing for hight quality services that come complete with our
+            adheres to OHS standards. Rest assured you can count on Strata
+            Roofing for high-quality services that come complete with our
             promise of reasonable rates.
           </p>
         </div>
