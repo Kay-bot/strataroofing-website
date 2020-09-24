@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { APP_NAME } from '../config';
 import {
   Collapse,
@@ -34,10 +35,10 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="#">Home</NavLink>
+              <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="#">Our Team</NavLink>
+              <NavLink href="/our-team">Our Team</NavLink>
             </NavItem>
             <UncontrolledDropdown
               className={classnames('text-center', styles.navLink)}
@@ -45,7 +46,7 @@ const Header = (props) => {
               inNavbar
             >
               <DropdownToggle nav caret>
-                Our Services
+                <Link href="/our-services">Our Services</Link>
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>Option 1</DropdownItem>
@@ -53,7 +54,7 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="#">Gallery</NavLink>
+              <NavLink href="/gallery">Gallery</NavLink>
             </NavItem>
             <NavItem className={classnames('text-center', styles.navLink)}>
               <NavLink href="/contact">Contact Us</NavLink>
