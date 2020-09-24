@@ -2,8 +2,30 @@
 @import 'scss/utilities';
 @import 'scss/media-query';
 
-// navbar
+// Secondary header
+.secondary-header {
+  background: $primary-color;
+  height: 2rem;
+  p {
+    display: inline;
+  }
+  span {
+    padding: 10px;
+  }
+  .md-devices {
+    @include md {
+      display: none;
+    }
+    @include sm {
+      display: none;
+    }
+    @include xs {
+      display: none;
+    }
+  }
+}
 
+// navbar
 .brand {
   font-size: 3rem;
   margin-right: 0;
@@ -35,7 +57,7 @@
   border-bottom: 3px transparent solid;
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
-  color: $dark-color !important;
+
   &:hover {
     border-color: $medium-color;
   }
@@ -122,8 +144,8 @@
 }
 // Footer
 .footer {
-  background: $dark-color;
-  color: set-text-color($dark-color);
+  background: $primary-color;
+  color: set-text-color($primary-color);
   height: auto;
   text-align: justify;
   hr {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { APP_NAME } from '../config';
+
 import {
   Collapse,
   Navbar,
@@ -24,6 +25,24 @@ const Header = (props) => {
 
   return (
     <div>
+      <div
+        className={classnames(
+          'text-center text-light py-1',
+          styles['secondary-header']
+        )}
+      >
+        <p className={classnames(styles['md-devices'])}>
+          Strata Roofing Pty Ltd
+          <span> | </span>
+        </p>
+
+        <p className={classnames(styles['md-devices'])}>
+          Professional Roofing Services throughout the Sydney Area{' '}
+          <span> | </span>
+        </p>
+
+        <p>Contact Us: service@strataroofing.com.au</p>
+      </div>
       <Navbar color="#fff" light expand="md">
         <NavbarBrand href="/">
           <a className={classnames('navbar-brand text-primary', styles.brand)}>
