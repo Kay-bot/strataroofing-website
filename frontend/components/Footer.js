@@ -34,7 +34,8 @@ const Footer = (props) => {
       </div>
 
       <p className="text-center pt-5">
-        Copyright &copy; 2020 StrataRoofing.com. All Rights Reseved
+        Copyright &copy; 2020 StrataRoofing.com. | All Rights Reseved | Wesite
+        by <a href="http://kay-srikaew.com/index.html"> Bubbly Digital</a>
       </p>
     </div>
   );
