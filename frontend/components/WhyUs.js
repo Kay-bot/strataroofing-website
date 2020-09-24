@@ -24,7 +24,7 @@ const OurFeatures = () => {
                 on us for specialised installation replacement and repair of
                 flat roofs, shingle roofs, seamless and gutters.{' '}
                 <span>
-                  <a href="/our-service">See more services...</a>
+                  <a href="/our-services">See more services...</a>
                 </span>
               </p>
               <p>
@@ -61,7 +61,7 @@ const OurFeatures = () => {
               <h3>Excellent Service</h3>
               <p>
                 A great team of experienced and skilled roofers. Strata Roofing
-                team never compromise on quality. Count on us for dependable,
+                team never compromise on quality. Count on us for dependable and
                 high quality services.{' '}
               </p>
               <p>
