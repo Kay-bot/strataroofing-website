@@ -46,3 +46,18 @@
 }
 
 // How can we help
+
+// Footer
+.footer {
+  background: $dark-color;
+  color: set-text-color($dark-color);
+  height: auto;
+  text-align: justify;
+  hr {
+    height: 2px;
+    width: 100%;
+    background: $main-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
