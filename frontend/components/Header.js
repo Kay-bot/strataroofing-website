@@ -53,7 +53,10 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="#">Contact Us</NavLink>
+              <NavLink href="#">Gallery</NavLink>
+            </NavItem>
+            <NavItem className={classnames('text-center', styles.navLink)}>
+              <NavLink href="/contact">Contact Us</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

@@ -1,5 +1,6 @@
 import styles from './Main.module.scss';
 import classnames from 'classnames';
+import Link from 'next/link';
 
 const HowCanWeHelp = () => {
   return (
@@ -58,9 +59,9 @@ const HowCanWeHelp = () => {
           </div>
         </div>
         <p className="lead">Get in touch for a free estimate and inspection</p>
-        <a href="#" className="btn-main">
-          Contact us now
-        </a>
+        <Link href="/contact">
+          <a className="btn-main">Contact us now</a>
+        </Link>
       </section>
     </div>
   );
