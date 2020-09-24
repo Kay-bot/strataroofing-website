@@ -33,14 +33,14 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem className={classnames('ml-auto', styles.navLink)}>
+            <NavItem className={classnames('text-center', styles.navLink)}>
               <NavLink href="#">Home</NavLink>
             </NavItem>
-            <NavItem className={classnames('ml-auto', styles.navLink)}>
+            <NavItem className={classnames('text-center', styles.navLink)}>
               <NavLink href="#">Our Team</NavLink>
             </NavItem>
             <UncontrolledDropdown
-              className={classnames('ml-auto', styles.navLink)}
+              className={classnames('text-center', styles.navLink)}
               nav
               inNavbar
             >
@@ -52,7 +52,7 @@ const Header = (props) => {
                 <DropdownItem>Option 2</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem className={classnames('ml-auto', styles.navLink)}>
+            <NavItem className={classnames('text-center', styles.navLink)}>
               <NavLink href="#">Contact Us</NavLink>
             </NavItem>
           </Nav>
