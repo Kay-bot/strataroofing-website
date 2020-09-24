@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { APP_NAME } from '../config';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
+  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -21,37 +23,37 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="#fff" expand="md">
-        <NavLink className={classnames(styles.brand)} href="/">
-          <img alt="strata roofing" src="/images/logo.png" />
-        </NavLink>
+      <Navbar color="light" light expand="md">
+        <NavbarBrand href="/">
+          <a className={classnames('navbar-brand text-primary', styles.brand)}>
+            <img alt="Strata Roofing" src="/images/logo.png" />
+            <span>{APP_NAME}</span>
+          </a>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto pr-5 font-weight-bold" navbar>
-            <NavItem className={classnames(styles.navLink)}>
+          <Nav className="ml-auto" navbar>
+            <NavItem className={classnames('ml-auto', styles.navLink)}>
               <NavLink href="#">Home</NavLink>
             </NavItem>
+            <NavItem className={classnames('ml-auto', styles.navLink)}>
+              <NavLink href="#">Our Team</NavLink>
+            </NavItem>
             <UncontrolledDropdown
+              className={classnames('ml-auto', styles.navLink)}
               nav
               inNavbar
-              className={classnames(styles.navLink)}
             >
               <DropdownToggle nav caret>
-                Service
+                Our Services
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Service 1</DropdownItem>
-                <DropdownItem>Service 2</DropdownItem>
-                <DropdownItem>Service 3</DropdownItem>
-                <DropdownItem>Service 4</DropdownItem>
+                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem className={classnames(styles.navLink)}>
-              <NavLink href="#">About</NavLink>
-            </NavItem>
-
-            <NavItem className={classnames(styles.navLink)}>
-              <NavLink href="#">Blog</NavLink>
+            <NavItem className={classnames('ml-auto', styles.navLink)}>
+              <NavLink href="#">Contact Us</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

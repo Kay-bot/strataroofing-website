@@ -5,22 +5,32 @@
 // navbar
 
 .brand {
+  font-size: 3rem;
   margin-right: 0;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: auto;
+  @include md {
+    font-size: 2rem;
+    width: 80px;
+    height: auto;
+  }
   @include sm {
-    width: 100px;
-    height: 100px;
+    font-size: 2rem;
+    width: 60px;
+    height: auto;
   }
   @include xs {
-    width: 80px;
-    height: 80px;
+    font-size: 2rem;
+    width: 60px;
+    height: auto;
+  }
+  span {
+    color: $dark-color;
   }
 }
 
 .navLink {
   text-decoration: none;
-  color: #fff;
   text-transform: uppercase;
   border-bottom: 3px transparent solid;
   padding-bottom: 0.5rem;
