@@ -1,14 +1,14 @@
 import Layout from '../../components/Layout';
 import { Container } from 'reactstrap';
 
-const OurServices = () => {
+const OurTeam = () => {
   return (
     <Layout>
       <Container>
-        <div>Our Services</div>
+        <div>Our Team</div>
       </Container>
     </Layout>
   );
 };
 
-export default OurServices;
+export default OurTeam;
