@@ -46,7 +46,6 @@
 }
 
 // How can we help
-
 .specials {
   margin-top: 3rem;
   display: grid;
@@ -64,6 +63,30 @@
   }
   @include xs {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// Why Us
+.features {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include xs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .icon-color {
+    color: $main-color;
+    padding-bottom: 0.4rem;
+  }
+  a {
+    color: red;
   }
 }
 
