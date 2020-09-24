@@ -24,7 +24,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="#fff" light expand="md">
         <NavbarBrand href="/">
           <a className={classnames('navbar-brand text-primary', styles.brand)}>
             <img alt="Strata Roofing" src="/images/logo.png" />
@@ -46,11 +46,21 @@ const Header = (props) => {
               inNavbar
             >
               <DropdownToggle nav caret>
-                <Link href="/our-services">Our Services</Link>
+                Our Services
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem>
+                  <Link href="/our-services">Option 1</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="/our-services">Option 2</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="/our-services">Option 3</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="/our-services">Option 4</Link>
+                </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem className={classnames('text-center', styles.navLink)}>
