@@ -21,14 +21,15 @@ const Footer = (props) => {
           <h4>Our Location</h4>
           <hr></hr>
           <p>
-            <i class="fas fa-map-marker-alt"></i> 4.02, 44 Hampden road,
+            <i className="fas fa-map-marker-alt"></i> 4.02, 44 Hampden road,
             Artarmon 2064, NSW , Sydney.
           </p>
           <p>
-            <i class="fas fa-envelope-square"></i> service@strataroofing.com.au
+            <i className="fas fa-envelope-square"></i>{' '}
+            service@strataroofing.com.au
           </p>
           <p>
-            <i class="far fa-clock"></i> Mon - Fri: 9:00AM - 5:00PM
+            <i className="far fa-clock"></i> Mon - Fri: 9:00AM - 5:00PM
           </p>
         </div>
       </div>

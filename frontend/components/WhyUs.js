@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import styles from './Main.module.scss';
-import Contact from '../pages/contact/index';
 
 const OurFeatures = () => {
   return (
@@ -8,7 +7,7 @@ const OurFeatures = () => {
       <section id="our-features" className="bg-light text-center py-2 mt-5">
         <div className="container">
           <h2 className="section-title">Why Choose Us?</h2>
-          <div class="bottom-line"></div>
+          <div className="bottom-line"></div>
 
           <div className={classnames(styles['features'])}>
             <div>
