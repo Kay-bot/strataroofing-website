@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'next/link';
 import { signup } from '../../actions/auth';
 
-const SingupComponent = () => {
+const SignupComponent = () => {
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -96,4 +95,4 @@ const SingupComponent = () => {
   );
 };
 
-export default SingupComponent;
+export default SignupComponent;
