@@ -31,6 +31,8 @@
   margin-right: 0;
   width: 80px;
   height: auto;
+  cursor: pointer;
+
   @include md {
     font-size: 2rem;
     width: 80px;
@@ -57,7 +59,7 @@
   border-bottom: 3px transparent solid;
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
-
+  cursor: pointer;
   &:hover {
     border-color: $medium-color;
   }

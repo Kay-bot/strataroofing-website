@@ -44,20 +44,26 @@ const Header = (props) => {
         <p>Contact Us: service@strataroofing.com.au</p>
       </div>
       <Navbar color="#fff" light expand="md">
-        <NavbarBrand href="/">
-          <a className={classnames('navbar-brand text-primary', styles.brand)}>
-            <img alt="Strata Roofing" src="/images/logo.png" />
-            <span>{APP_NAME}</span>
-          </a>
-        </NavbarBrand>
+        <Link href="/">
+          <NavbarBrand>
+            <a className={classnames('navbar-brand', styles.brand)}>
+              <img alt="Strata Roofing" src="/images/logo.png" />
+              <span>{APP_NAME}</span>
+            </a>
+          </NavbarBrand>
+        </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="/">Home</NavLink>
+              <Link href="/">
+                <NavLink>Home</NavLink>
+              </Link>
             </NavItem>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="/our-team">Our Team</NavLink>
+              <Link href="/our-team">
+                <NavLink>Our Team</NavLink>
+              </Link>
             </NavItem>
             <UncontrolledDropdown
               className={classnames('text-center', styles.navLink)}
@@ -69,24 +75,36 @@ const Header = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  <Link href="/our-services">Option 1</Link>
+                  <Link href="/our-services">
+                    <NavLink> Option 1</NavLink>
+                  </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="/our-services">Option 2</Link>
+                  <Link href="/our-services">
+                    <NavLink> Option 2</NavLink>
+                  </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="/our-services">Option 3</Link>
+                  <Link href="/our-services">
+                    <NavLink>Option 3</NavLink>
+                  </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="/our-services">Option 4</Link>
+                  <Link href="/our-services">
+                    <NavLink>Option 4</NavLink>
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="/gallery">Gallery</NavLink>
+              <Link href="/gallery">
+                <NavLink>Gallery</NavLink>
+              </Link>
             </NavItem>
             <NavItem className={classnames('text-center', styles.navLink)}>
-              <NavLink href="/contact">Contact Us</NavLink>
+              <Link href="/contact">
+                <NavLink>Contact Us</NavLink>
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
