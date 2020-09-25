@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 import { APP_NAME } from '../config';
+import { signout, isAuth } from '../actions/auth';
 
 import {
   Collapse,
@@ -104,16 +106,29 @@ const Header = (props) => {
                 <NavLink>Contact Us</NavLink>
               </Link>
             </NavItem>
-            <NavItem className={classnames('text-center', styles.navLink)}>
-              <Link href="/signin">
-                <NavLink>Signin</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem className={classnames('text-center', styles.navLink)}>
-              <Link href="/signup">
-                <NavLink>Signup</NavLink>
-              </Link>
-            </NavItem>
+            {!isAuth() && (
+              <React.Fragment>
+                <NavItem className={classnames('text-center', styles.navLink)}>
+                  <Link href="/signin">
+                    <NavLink>Signin</NavLink>
+                  </Link>
+                </NavItem>
+                <NavItem className={classnames('text-center', styles.navLink)}>
+                  <Link href="/signup">
+                    <NavLink>Signup</NavLink>
+                  </Link>
+                </NavItem>
+              </React.Fragment>
+            )}
+            {isAuth() && (
+              <NavItem className={classnames('text-center', styles.navLink)}>
+                <NavLink
+                  onClick={() => signout(() => Router.replace('/signin'))}
+                >
+                  Signout
+                </NavLink>
+              </NavItem>
+            )}
           </Nav>
         </Collapse>
       </Navbar>
