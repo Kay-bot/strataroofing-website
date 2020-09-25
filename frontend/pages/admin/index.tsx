@@ -1,11 +1,13 @@
 import Layout from '../../components/Layout';
 import { Container } from 'reactstrap';
-
+import Admin from '../../components/auth/Admin';
 const AdminIndex = () => {
   return (
     <Layout>
       <Container>
-        <h2>Admin Dashboard</h2>
+        <Admin>
+          <h2>Admin Dashboard</h2>
+        </Admin>
       </Container>
     </Layout>
   );
