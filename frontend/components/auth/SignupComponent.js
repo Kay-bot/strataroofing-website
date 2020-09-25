@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'next/link';
 import { signup } from '../../actions/auth';
 
 const SingupComponent = () => {
@@ -42,7 +43,14 @@ const SingupComponent = () => {
     setValues({ ...values, error: false, [name]: e.target.value });
   };
 
-  const singupForm = () => {
+  const showLoading = () =>
+    loading ? <div className="alert alert-info">Loading...</div> : '';
+  const showError = () =>
+    error ? <div className="alert alert-danger">{error}</div> : '';
+  const showMessage = () =>
+    message ? <div className="alert alert-info">{message}</div> : '';
+
+  const signupForm = () => {
     return (
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -78,7 +86,14 @@ const SingupComponent = () => {
       </form>
     );
   };
-  return <React.Fragment>{singupForm()}</React.Fragment>;
+  return (
+    <React.Fragment>
+      {showError()}
+      {showLoading()}
+      {showMessage()}
+      {showForm && signupForm()}
+    </React.Fragment>
+  );
 };
 
 export default SingupComponent;
