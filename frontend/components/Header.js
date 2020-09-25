@@ -106,6 +106,16 @@ const Header = (props) => {
                 <NavLink>Contact Us</NavLink>
               </Link>
             </NavItem>
+            <NavItem className={classnames('text-center', styles.navLink)}>
+              <Link href="/signin">
+                <NavLink>Signin</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem className={classnames('text-center', styles.navLink)}>
+              <Link href="/signup">
+                <NavLink>Signup</NavLink>
+              </Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
