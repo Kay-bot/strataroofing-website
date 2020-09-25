@@ -45,11 +45,9 @@ const Header = (props) => {
       </div>
       <Navbar color="#fff" light expand="md">
         <Link href="/">
-          <NavbarBrand>
-            <a className={classnames('navbar-brand', styles.brand)}>
-              <img alt="Strata Roofing" src="/images/logo.png" />
-              <span>{APP_NAME}</span>
-            </a>
+          <NavbarBrand className={classnames('navbar-brand', styles.brand)}>
+            <img alt="Strata Roofing" src="/images/logo.png" />
+            <span>{APP_NAME}</span>
           </NavbarBrand>
         </Link>
         <NavbarToggler onClick={toggle} />
