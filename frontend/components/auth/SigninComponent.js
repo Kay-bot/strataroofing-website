@@ -32,7 +32,7 @@ const SigninComponent = () => {
         // authenticate user
         authenticate(data, () => {
           if (isAuth() && isAuth.role === 1) {
-            Router.push('/admid');
+            Router.push('/admin');
           } else {
             Router.push('/user');
           }
