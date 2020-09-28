@@ -136,7 +136,7 @@ const Header = (props) => {
             )}
 
             {isAuth() && isAuth().role === 1 && (
-              <NavItem>
+              <NavItem className={classnames('text-center', styles.navLink)}>
                 <Link href="/admin">
                   <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
                 </Link>
@@ -144,7 +144,7 @@ const Header = (props) => {
             )}
 
             {isAuth() && (
-              <NavItem>
+              <NavItem className={classnames('text-center', styles.navLink)}>
                 <NavLink
                   style={{ cursor: 'pointer' }}
                   onClick={() => signout(() => Router.replace(`/signin`))}
