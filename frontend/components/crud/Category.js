@@ -122,7 +122,7 @@ const Category = () => {
   const newCategoryForm = () => (
     <form onSubmit={clickSubmit}>
       <div className="form-group">
-        <label className="text-muted">Name</label>
+        <label className="text-muted">Category Name</label>
         <input
           type="text"
           className="form-control"
@@ -141,12 +141,14 @@ const Category = () => {
 
   return (
     <React.Fragment>
-      {showSuccess()}
-      {showError()}
-      {showRemoved()}
-      <div onMouseMove={mouseMoveHandler}>
-        {newCategoryForm()}
-        {showCategories()}
+      <div className="my-2 py-2">
+        {showSuccess()}
+        {showError()}
+        {showRemoved()}
+        <div onMouseMove={mouseMoveHandler}>
+          {newCategoryForm()}
+          {showCategories()}
+        </div>
       </div>
     </React.Fragment>
   );
