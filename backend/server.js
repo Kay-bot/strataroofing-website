@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //bring routes
-const blogsRoutes = require('./routes/blog');
+const ourTeamRoutes = require('./routes/our-team');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const categoryRoutes = require('./routes/category');
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // routes middleware
-app.use('/api', blogsRoutes);
+app.use('/api', ourTeamRoutes);
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
