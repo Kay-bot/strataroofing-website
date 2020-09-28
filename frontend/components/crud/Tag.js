@@ -132,7 +132,7 @@ const Tag = () => {
           required
         />
       </div>
-      <div>
+      <div className="text-center">
         <button type="submit" className="btn btn-primary">
           Create
         </button>
