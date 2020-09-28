@@ -1,16 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {
-  create,
-  list,
-  listAllBlogsCategoriesTags,
-  read,
-  remove,
-  update,
-  photo,
-  listRelated,
-  listSearch,
-} = require('../controllers/blog');
+const { create } = require('../controllers/our-team');
 
 const { requireSignin, adminMiddleware } = require('../controllers/auth');
 
